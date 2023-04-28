@@ -1,7 +1,6 @@
-var textoFinal = document.querySelector(".texto_final");
 var imagemTexto = document.querySelector(".imagem_texto");
 var imgTextoFinal = document.querySelector(".img_final");
-var troca = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
+var troca = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"],["r","gay"]];
 var houveTroca = 0;
 
 function capturaTexto(){ // essa função vai capturar o texto que estiver
@@ -12,6 +11,7 @@ function capturaTexto(){ // essa função vai capturar o texto que estiver
 
 function btnEncrip(){
 	var texto = capturaTexto();
+	var textoFinal = document.querySelector(".texto_final");
 	if(texto == ""){
 		imgTextoFinal.classList.remove("ocultar");
 		textoFinal.textContent = "";
@@ -19,11 +19,12 @@ function btnEncrip(){
 		ocultarImagem();
     	textoFinal.textContent = encriptar(texto);
 	}
+
 }
 
 function btnDescrip(){
 	var texto = capturaTexto();
-	if(texto == ""){
+	if(texto == null){
 		imgTextoFinal.classList.remove("ocultar");
 		textoFinal.textContent = "";
 	}else{
@@ -34,13 +35,6 @@ function btnDescrip(){
 
 function ocultarImagem(){
 	imgTextoFinal.classList.add("ocultar");
-}
-
-function btnCopiar(){
-	var texto = textoFinal;
-	texto.select();
-  	navigator.clipboard.writeText(texto.value);
-  	texto.value = "";
 }
 
 function encriptar(mensagem){
@@ -72,4 +66,13 @@ function desencriptar(mensagem){
 		}
 	}
 	return texto;
+}
+
+function btnCopiar(){
+	var textoFinal = document.querySelector(".texto_final");
+	var texto = textoFinal;
+	texto.select();
+  	navigator.clipboard.writeText(texto.value);
+  	texto.value = null;
+	imgTextoFinal.classList.remove("ocultar");
 }

@@ -7,32 +7,32 @@
 		<meta charset="UTF-8"> <!--- meta charset ajuda o navegador a identificar acentos --->
 		<meta name="viewport" content="width=device-width">
 		<title>Encriptografar e Desencriptografar</title> <!--- tittle é a tag que usamos para definar o titulo da aba da pagina --->
-		<link rel="stylesheet" href="reset.css"> <!--- reset.css remove os estilos padrão do navegador --->
-		<link rel="stylesheet" href="style.css"> <!--- style.css vai adicionar os estilos desejados em nossa pagina--->
+		<link rel="stylesheet" href="/assets/css/reset.css"> <!--- reset.css remove os estilos padrão do navegador --->
+		<link rel="stylesheet" href="/assets/css/style.css"> <!--- style.css vai adicionar os estilos desejados em nossa pagina--->
 	</head> 
 
 
 	<body> <!--- body é a tag que colocamos os conteudos de nosso site  --->
 
-			<header>
-				<a href="https://www.alura.com.br/challenges/oracle-one/sprint01-construa-decodificador-texto-com-javascript" target="_blank"><img title="Link para os desafios alura" src="Vector.png" class="logo" alt="Logo da Alura"><p class="frase_logo">Clique na logo</p></a>
-			</header>
+		<header>
+			<a href="https://www.alura.com.br/challenges/oracle-one/sprint01-construa-decodificador-texto-com-javascript" target="_blank"><img title="Link para os desafios alura" src="/assets/img/Vector.png" class="logo" alt="Logo da Alura"><p class="frase_logo">Clique na logo</p></a>
+		</header>
 
 		<main> <!--- Main é a tag que conterá o conteudo principal de nosso site --->
 			<form  class="caixa_principal">
 				<section> <!--- divs são utilizadas para dividir conteudos --->
 					<textarea autofocus class="texto_inicial" cols="80" rows="18" placeholder="Escreve o texto que deseja encriptografar ou desencriptografar"></textarea>
 					<p class="obersevacao">&#9888; Apenas letras minusculas e sem acento.<p>
-				</section>
+					</section>
 
-				<section class="conteiner_img">
-					<textarea class="texto_final" cols="30" rows="25" disabled></textarea>
-					<button onclick="btnCopiar()" id="copiar">Copiar</button>
-					<di class="img_final"> 
-						<img class="imagem_texto" src="imagemtexto.png">
-						<p>Nenhuma mensagem Encontrada</p>
-					</div>
-				</section>
+					<section class="conteiner_img">
+						<textarea class="texto_final" cols="30" rows="25" disabled></textarea>
+						<button type="button" onclick="btnCopiar()" id="copiar">Copiar</button>
+						<di class="img_final"> 
+							<img class="imagem_texto" src="/assets/img/imagemtexto.png">
+							<p>Nenhuma mensagem Encontrada</p>
+						</div>
+					</section>
 				</form>
 
 				<div class="botoes">
@@ -40,15 +40,15 @@
 					<button onclick="btnDescrip()" class="desencriptografar">Desencriptografar</button>
 				</div>
 
-		</main>
+			</main>
 
 			<footer>
-					<p>&#169;Desenvolvido por Guilherme Martins Souza</p>
-					<a href="https://github.com/Guilherme-martins-souza" target="_blank"><img src="githublogo.png"></a>
-					<a href="https://www.linkedin.com/in/guilherme-martins-souza-21a77822b/" target="_blank"><img src="linkedinlogo.png"></a>
+				<p>&#169;Desenvolvido por Guilherme Martins Souza</p>
+				<a href="https://github.com/Guilherme-martins-souza" target="_blank"><img src="/assets/img/githublogo.png"></a>
+				<a href="https://www.linkedin.com/in/guilherme-martins-souza-21a77822b/" target="_blank"><img src="/assets/img/linkedinlogo.png"></a>
 			</footer>
 
-			<script type="text/javascript" src="script.js"></script>
-	</body>
+			<script type="text/javascript" src="/assets/js/script.js"></script>
+		</body>
 
-</html>
+	</html>
