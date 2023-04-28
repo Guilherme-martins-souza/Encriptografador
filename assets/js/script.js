@@ -24,6 +24,7 @@ function btnEncrip(){
 
 function btnDescrip(){
 	var texto = capturaTexto();
+	var textoFinal = document.querySelector(".texto_final");
 	if(texto == null){
 		imgTextoFinal.classList.remove("ocultar");
 		textoFinal.textContent = "";
@@ -65,14 +66,14 @@ function desencriptar(mensagem){
 			texto = texto.replaceAll(troca[i][1], troca[i][0]);	
 		}
 	}
+	console.log(texto);
 	return texto;
 }
 
 function btnCopiar(){
 	var textoFinal = document.querySelector(".texto_final");
-	var texto = textoFinal;
-	texto.select();
-  	navigator.clipboard.writeText(texto.value);
-  	texto.value = null;
+	textoFinal.select();
+  	navigator.clipboard.writeText(textoFinal.value);
+  	textoFinal.textContent = '';
 	imgTextoFinal.classList.remove("ocultar");
 }
