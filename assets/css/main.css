@@ -1,0 +1,216 @@
+/* Container tag main */
+.caixa_principal{
+	width: 70%;
+	max-height: 542px;
+	position: relative; /* definando posição relativa para conseguir usar a posição absoluta 
+						nos elementos dentro dessa divisão, sem que eles saiam da mesma. */
+	margin-right: auto;  /* centralizando */
+	margin-left: auto;  /* centralizando */
+
+}
+
+.caixa_principal textarea{
+    resize: none;
+    background: #354457;
+    border: none;
+    border-radius: 13px;
+    font-size: 24px;
+    outline: none;
+    color: #d2d5d7;
+}
+
+/* Caixa de texto esquerda */
+
+.texto_inicial{
+	width: 60%;
+}
+
+.texto_inicial::selection {
+  background-color: #15202b;
+  color: #4f637d;
+}
+
+.texto_inicial:hover{
+	border: 1px solid #354457;
+}
+
+.texto_inicial::-webkit-input-placeholder{  /* modificando o texto do placeholder */
+  	font-size: 20px;
+  	color: #d2d5d7;
+  	padding-top: 20px;
+  	text-align: center;
+}
+
+.obersevacao{ 
+	font-size: 20px;
+	margin-top: 1%;
+	margin-left: 1%;
+	color: #a6a4a4;
+}
+
+.obersevacao::first-letter{
+	color: #d76046;
+}
+
+/* Botões caixa de texto esquerda */
+
+.botoes{
+	margin-left: 18%;
+	width: 70%; /* definindo tamanho da div */
+
+}
+
+.encriptografar, .desencriptografar{
+	font-size: 22px;
+	border: none;
+  	border-radius: 13px;
+  	color: #d2d5d7;
+}
+
+.encriptografar{
+	background: #166498;
+	padding: 30px 61.5px;
+	margin: 3%;
+}
+
+
+.desencriptografar{
+	background: #4f637d;
+	padding: 30px 43px;
+	margin: 3%;
+}
+
+.desencriptografar:hover, .encriptografar:hover, #copiar:hover{
+ 	background: #1888d3;
+ 	transition: 0.5s all;
+}
+
+/* Caixa de texto direita */
+
+.texto_final{
+	width: 100%;
+}
+
+.conteiner_img{
+	position: absolute;
+	display: flex;
+	top: 0;
+	right: 0;
+}
+
+.img_final{
+	position: absolute;
+	width: 90%;
+	text-align: center;
+	padding-left: 5%;
+	padding-top: 18%;
+}
+
+.img_final p{
+	color: #d2d5d7;
+	font-size: 22px;
+	margin-top: 5%;
+}
+
+.copiar{
+	background: #166498;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+    margin-left: -77px;
+    margin-bottom: 10px;
+	padding: 30px 45px;
+	font-size: 22px;
+	border: none;
+  	border-radius: 13px;
+  	color: #d2d5d7;
+}
+
+.ocultar{
+	display: none;
+}
+
+/* Mobile largura < 500px */
+
+@media (max-width: 500px){
+
+    .caixa_principal{
+        width: 100%;
+        max-height: none;
+        display: block;
+        position: static; /* definando posição relativa para conseguir usar a posição absoluta 
+                            nos elementos dentro dessa divisão, sem que eles saiam da mesma. */ 
+    }
+    
+    .obersevacao{
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 1%;
+        margin-left: 1%;
+        color: #a6a4a4;
+    }
+    
+    .conteiner_img{
+        width: auto;
+        position: relative;
+    
+    }
+    
+    .texto_inicial, .texto_final{
+      width: 100%;
+      height: 500px;
+      margin: 10px;
+    }
+    
+    .texto_inicial{
+        width: 94%;
+    }
+    
+    .img_final {
+      position: absolute;
+      width: 60%;
+      padding-left: 0;
+      padding-top: 50px;
+      margin-right: auto;
+      margin-left: 20%;
+    }
+    .imagem_texto{
+        width: 80%;
+    }
+    
+    #copiar {
+      background: #166498;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -73px;
+      margin-bottom: 20px;
+      padding: 7% 10%;
+      font-size: 22px;
+      border: none;
+      border-radius: 13px;
+      color: #d2d5d7;
+    }
+    
+    .botoes {	
+        position: absolute;
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+        bottom: auto;
+        top: 350px;
+        text-align: center;
+    }
+    
+    .encriptografar{
+        background: #166498;
+        padding: 5% 10%;
+    }
+    
+    
+    .desencriptografar{
+        background: #4f637d;
+        padding: 5% 10%;
+    }
+}
