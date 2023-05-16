@@ -18,45 +18,61 @@
 
 <body> <!--- body é a tag que colocamos os conteudos de nosso site  --->
 
-	<header>
-		<a href="https://www.alura.com.br/challenges/oracle-one/sprint01-construa-decodificador-texto-com-javascript"
-			target="_blank"><img title="Link para os desafios alura" src="assets/img/Vector.png" class="logo"
-				alt="Logo da Alura">
-		</a>
+	<header class="cabecalho">
+		<div>
+			<a href="https://www.alura.com.br/challenges/oracle-one/sprint01-construa-decodificador-texto-com-javascript"
+				target="_blank"><img title="Link para os desafios alura" src="assets/img/Vector.png" class="logo"
+					alt="Logo da Alura">
+			</a>
+		</div>
 	</header>
 
-	<main> <!--- Main é a tag que conterá o conteudo principal de nosso site --->
+	<main> <!--- Main é a tag que contem o conteudo principal de site --->
 		<form class="caixa_principal">
-			<section> <!--- divs são utilizadas para dividir conteudos --->
-				<textarea autofocus class="texto_inicial" cols="80" rows="18"
-					placeholder="Escreve o texto que deseja encriptografar ou desencriptografar"></textarea>
-				<p class="obersevacao">&#9888; Apenas letras minusculas e sem acento.
-				<p>
+			<section class="conteiner_esquerda"> <!--- divs são utilizadas para dividir conteudos --->
+
+				<div class="container_texto_inicial">
+					<textarea autofocus class="texto_inicial"
+						placeholder="Escreve o texto que deseja encriptografar ou desencriptografar"></textarea>
+					<p class="obersevacao">&#9888; Apenas letras minusculas e sem acento.<p>
+				</div>
+
+				<div class="botoes">
+					<button onclick="btnEncrip()" class="encriptografar">Encriptografar</button>
+					<button onclick="btnDescrip()" class="desencriptografar">Desencriptografar</button>
+				</div>
+
 			</section>
 
-			<section class="conteiner_img">
-				<textarea class="texto_final" cols="30" rows="25" disabled></textarea>
-				<button type="button" onclick="btnCopiar()" class="copiar">Copiar</button>
+			<section class="conteiner_direita">
 
-				<div class="img_final">
-					<img class="imagem_texto" src="assets/img/imagemtexto.png">
-					<p>Nenhuma mensagem Encontrada</p>
+				<div class="conteiner_texto">
+					<textarea class="texto_final" disabled></textarea>
+
+					<div class="conteiner_img">
+						<div class="img_final">
+							<img class="imagem_texto" src="assets/img/imagemtexto.png">
+							<p>Nenhuma mensagem Encontrada</p>
+						</div>
+					</div>
 				</div>
+
+				<div class="container-copiar">
+					<button type="button" onclick="btnCopiar()" class="copiar">Copiar</button>
+				</div>
+
 			</section>
 		</form>
-
-		<div class="botoes">
-			<button onclick="btnEncrip()" class="encriptografar">Encriptografar</button>
-			<button onclick="btnDescrip()" class="desencriptografar">Desencriptografar</button>
-		</div>
-
 	</main>
 
-	<footer>
+	<footer class="rodape">
 		<p>&#169;Desenvolvido por Guilherme Martins Souza</p>
-		<a href="https://github.com/Guilherme-martins-souza" target="_blank"><img src="assets/img/githublogo.png"></a>
-		<a href="https://www.linkedin.com/in/guilherme-martins-souza-21a77822b/" target="_blank"><img
-				src="assets/img/linkedinlogo.png"></a>
+		<div>
+			<a href="https://github.com/Guilherme-martins-souza" target="_blank"><img
+					src="assets/img/githublogo.png"></a>
+			<a href="https://www.linkedin.com/in/guilherme-martins-souza-21a77822b/" target="_blank"><img
+					src="assets/img/linkedinlogo.png"></a>
+		</div>
 	</footer>
 
 	<script type="text/javascript" src="assets/js/script.js"></script>
