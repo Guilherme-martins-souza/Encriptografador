@@ -7,7 +7,7 @@
 }
 
 html{
-	font-size: 1.4rem;
+	font-size: 1.4em;
 }
 
 body {
@@ -26,18 +26,34 @@ body {
 }
 
 .caixa_principal{
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-
 	grid-area: conteudo;
-	display: grid;
-    grid-template-columns: "esquerda","direita";
-    grid-template-columns: 60% 32%;
-	grid-template-rows: var(--height-main);
-	gap: 8%;
 }
 
 .rodape {
     grid-area: rodape;
+}
+
+/* Tela menor que 1024px */
+
+@media (max-width: 1024px) {
+    html{
+        font-size: 1.2em;
+    }
+}
+
+/* Tela menor que 768px */
+
+@media (max-width: 768px) {
+    :root{
+		/* medidas */
+		--height-main: 35vh;
+	}
+
+	html{
+        font-size: 0.9em;
+    }
+
+	body{
+		grid-template-rows: 8vh 84vh 8vh;
+	}
 }
