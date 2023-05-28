@@ -5,13 +5,13 @@ var houveTroca = 0;
 
 function capturaTexto(){ // essa função vai capturar o texto que estiver
 						 // dentro do textarea
-	var textoinicial = document.querySelector(".texto_inicial");
+	let textoinicial = document.querySelector(".texto_inicial");
 	return textoinicial.value;
 }
 
 function btnEncrip(){
-	var texto = capturaTexto();
-	var textoFinal = document.querySelector(".texto_final");
+	let texto = capturaTexto();
+	let textoFinal = document.querySelector(".texto_final");
 	if(texto == ""){
 		imgTextoFinal.classList.remove("ocultar");
 		textoFinal.textContent = "";
@@ -23,8 +23,8 @@ function btnEncrip(){
 }
 
 function btnDescrip(){
-	var texto = capturaTexto();
-	var textoFinal = document.querySelector(".texto_final");
+	let texto = capturaTexto();
+	let textoFinal = document.querySelector(".texto_final");
 	if(texto == null){
 		imgTextoFinal.classList.remove("ocultar");
 		textoFinal.textContent = "";
@@ -35,12 +35,14 @@ function btnDescrip(){
 }
 
 function ocultarImagem(){
+	let textoFinal = document.querySelector(".texto_final");
 	imgTextoFinal.classList.add("ocultar");
+	textoFinal.classList.add("texto_final_ext");
 }
 
 function encriptar(mensagem){
-	var texto = mensagem.toLowerCase();
-	var textoFinal ="";
+	let texto = mensagem.toLowerCase();
+	let textoFinal ="";
 
 	for(i = 0; i < texto.length; i++){
 		for( j = 0; j < troca.length; j++){
@@ -60,7 +62,7 @@ function encriptar(mensagem){
 }
 
 function desencriptar(mensagem){
-	var texto = mensagem.toLowerCase();
+	let texto = mensagem.toLowerCase();
 	for(let i= 0; i < troca.length; i++) {
 		if(texto.includes(troca[i][1])){
 			texto = texto.replaceAll(troca[i][1], troca[i][0]);	
@@ -71,9 +73,10 @@ function desencriptar(mensagem){
 }
 
 function btnCopiar(){
-	var textoFinal = document.querySelector(".texto_final");
+	let textoFinal = document.querySelector(".texto_final");
 	textoFinal.select();
   	navigator.clipboard.writeText(textoFinal.value);
   	textoFinal.textContent = '';
 	imgTextoFinal.classList.remove("ocultar");
+	textoFinal.classList.remove("texto_final_ext")
 }

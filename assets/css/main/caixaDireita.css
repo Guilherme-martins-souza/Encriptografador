@@ -27,6 +27,15 @@
     box-sizing: border-box;
 }
 
+.texto_final::selection {
+    background-color: #15202b;
+    color: #4f637d;
+  }
+
+.texto_final_ext{
+    height: 600px;
+}
+
 .img_final{
     width: 100%;
     text-align: center;
