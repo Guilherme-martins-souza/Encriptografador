@@ -80,7 +80,7 @@
 	margin-left: 3%;
 }
 
-.desencriptografar:hover, .encriptografar:hover, #copiar:hover{
+.desencriptografar:hover, .encriptografar:hover{
  	background: #1888d3;
  	transition: 0.5s all;
 }

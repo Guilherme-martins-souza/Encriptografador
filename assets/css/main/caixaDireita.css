@@ -71,6 +71,11 @@
     box-sizing: border-box;
 }
 
+.copiar:hover{
+    background: #1888d3;
+    transition: 0.5s all;
+}
+
 .ocultar{
 	display: none;
 }
